@@ -1,0 +1,46 @@
+body {
+    background-color: #0083c5;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+h1 {
+    display: block;
+    text-align: center;
+    
+    border-style: solid;
+    border: orangered;
+    color: orangered;
+
+}
+  
+  .wrapper {
+    padding-top: 20px;
+    
+  }
+  
+  .container {
+      display: block;
+      margin: auto;
+      text-align: center;
+      width: 60vw;
+      background-color: #ffffff;
+      border-style: solid;
+      border-radius: 10px;
+      box-shadow: 0 0 20px 5px;
+      padding: 10px;
+
+    }
+  
+  .btn-grid {
+    display: grid;
+    justify-content: left;
+    }
+
+
+  
