@@ -11,39 +11,37 @@
 <body>
  
   <div class="wrapper">
-   <h1>Coding Quiz Challenge</h1>
-   <div class="timer"> </div>
+ 
+   <h1>Coding Quiz Challenge</h1> 
+   
+  
 
     <div class="start-quiz">
         <button id="start-btn" class="start-btn">
-            Start
+            Start Quiz
         </button>
-    <div class="container">
-       <p class="hide"> test</p>
-        
-        <div id="options" class="btn-grid hide">
-            <button class="btn">
-                A: <span id="choice1"></span>
+    <div> 
+      <div id="timer"></div>
+        <div id="questions" class="questions"><p> </p></div>
+          
+          
+            <button class="btn" id="choice1" onclick="checkAnswer('choice1')">
+              
             </button>
-            <button class="btn">
-                B: <span id="choice2"></span>
+            <button class="btn" id="choice2" onclick="checkAnswer('choice2')">
+              
             </button>
-            <button class="btn">
-                C: <span id="choice3"></span>
+            <button class="btn" id="choice3" onclick="checkAnswer('choice3')">
+              
             </button>
-            <button class="btn">
-                D: <span id="choice4"></span>
+            <button class="btn" id="choice4" onclick="checkAnswer('choice4')">
+              
             </button>
-
-        </div>
-        
-           
-
-        
 
         
       </div>
     </div>
+    <div id="gameover" class="hide">Game over</div>
   </div>
 
   <script src="./assets/js/script.js"></script>

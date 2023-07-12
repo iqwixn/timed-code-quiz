@@ -19,15 +19,25 @@ h1 {
 
 }
 
+p{
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+
+
+}
+
   
   .wrapper {
     display: block;
+    background-color: lightblue;
     width: 400px;
-    padding-top: 20px;
+    padding: 20px;
+    border-style: solid;
+    border-radius: 10px;
 
   }
   
-  .container {
+  #questions{
       display: block;
       margin: auto;
       text-align: center;
@@ -53,12 +63,16 @@ h1 {
 
   .btn-grid {
     display: grid;
-    justify-content: left;
+    color: black;
     border-radius: 10px;
-    margin: 20px 0;
+    margin: 20px  0;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 3px;
     
     }
   .btn {
+    display: flex;
+    
     background-color: rgb(101, 101, 255);
     color: white;
     margin: 5px 0;
@@ -71,7 +85,7 @@ h1 {
   }
 
   .btn:hover {
-    border-color: black;
+    border-color: rgb(255, 179, 0);
     transition: .5s;
   }
   
@@ -79,15 +93,18 @@ h1 {
     display: none;
   }
 
-  .timer {
+  #timer {
     display: block;
-    ;
+
+    padding: 10px;
     text-align: right;
     font-size: larger;
     font-weight: bolder;
-    background-color: white;
+    background-color: lightblue;
     
-    color: orangered;
+    color: rgb(0, 0, 0);
 
 
   }
+
+  
