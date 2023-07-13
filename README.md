@@ -24,10 +24,10 @@ Getting the question incorrect subtracts 5 seconds from the timer.
 
 # Website Link
 
-https://iqwixn.github.io/horiseon-website-update/
+https://iqwixn.github.io/timed-code-quiz/
 
 # Website screenshot
 
-![Screenshot of Horiseon website](assets/images/horiseon-website-screenshot.jpg)
+![Screenshot of Horiseon website](assets/images/timed-code-quiz.jpg)
 
 
