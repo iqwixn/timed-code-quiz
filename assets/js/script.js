@@ -1,10 +1,7 @@
 var startButton = document.getElementById('start-btn');
 var startTimer = document.getElementById('start-btn');
 var startQuestions = document.getElementById('questions');
-var gameOver = document.getElementById('gameover');
-
-
-
+var showScore = document.getElementById('showscore');
 
 var choiceA = document.getElementById("choice1");
 var choiceB = document.getElementById("choice2");
@@ -16,7 +13,10 @@ startButton.addEventListener('click', startQuiz);
 var score = 0;
 var secondsLeft = 60;
 var currentQuestionNumber = 0;
+var finalScore;
 var correctAnswer;
+var totalQuestions = 5;
+var finalQuestion 
 var timer = document.querySelector('#timer');
 
 var questions = [
@@ -43,7 +43,7 @@ var questions = [
 
     },
     {
-        question : "What is the next leap year?",
+        question : "When is the next leap year?",
             a: "2024",
             b: "2025",
             c: "2026",
@@ -67,10 +67,10 @@ var questions = [
     {
         question : "What is the first derivative of 3x^2 + 2" ,
             a: "3",
-            b: "3x",
-            c: "3x + C",
-            d: "3x^2 + C",
-            trueAnswer: "choice3"
+            b: "6x",
+            c: "6x + C",
+            d: "3x + C",
+            trueAnswer: "choice2"
     
        
 
@@ -91,6 +91,7 @@ function timerStart() {
         alert("Game Over!")       
         clearInterval(timerInterval);
         
+        
       }
     }, 1000);
 
@@ -108,14 +109,20 @@ function generateQuestion() {
 
 function checkAnswer(answer) {
     correctAnswer = questions[currentQuestionNumber].trueAnswer;
-    if (answer === correctAnswer){
+    if (answer === correctAnswer ){
         currentQuestionNumber++;
         generateQuestion();
     }
     if (answer != correctAnswer){
         secondsLeft = secondsLeft - 5;
 
+    
     }
+    if (currentQuestionNumber == questions.length) {
+        clearInterval(timerInterval);
+        gameOver();
+    }    
+   
 
 }
 
@@ -125,10 +132,27 @@ function startQuiz() {
     quizBox.classList.remove('hide')
     startQuestions.classList.remove('hide')
     
+    
 
 }
 
-function showScore() {
+function restartQuiz() {
+    confirm("Would you like to play again?")
+    
+    }
+
     
 
+
+function endScore() {
+    score = secondsLeft;
+    showScore.innerHTML = "Current score is: " + score;
+    
+
+}
+
+function gameOver(){
+    timer.textContent = 0;
+    finalScore = score;
+    showScore.textContent = finalScore;    
 }
